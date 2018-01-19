@@ -2,10 +2,26 @@ body {
     background-image: url("../assets/503957228.jpg")
 }
 
+.menu {
+    border: 1px solid;
+    float: left;
+    width: 10%;
+    height: 500px;
+}
+
+.working-space {
+    border: 1px solid;
+    float: right;
+    width: 89%;
+    height: 500px;
+}
+
+
+/* 
 .chair {
     background-image: url("../assets/545151513.png")
 }
 
 .table {
     background-image: url("../assets/Tisch-201020506976.jpg")
-}
+} */
