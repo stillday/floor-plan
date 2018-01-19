@@ -10,15 +10,18 @@
     
             </div>
             <div class="content">
-                <div class="menu">
-                    <div class="chair"><img  src="assets/545151513.png" draggable="true"> </div>
+                <div class="menu" id="select-menu" ondrop="drop(event)">
+                    <div class="chair"><img  src="assets/545151513.png" draggable="true" ondragstart="drag(event)" id="select-chair"> </div>
                     <div class="table"></div>
                 </div>
-                <div class="working-space">
+                <div class="working-space" id="plan-area" ondrop="drop(event)" ondragover="allowDrop(event)">
 
                 </div>
             </div>
         </div>
+        <footer>
+            <script src="js/drap-and-drop.js"></script>
+        </footer>
 
     </body>
 </html>

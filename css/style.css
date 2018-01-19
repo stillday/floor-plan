@@ -16,6 +16,9 @@ body {
     height: 500px;
 }
 
+.chair img {
+    width: 50%;
+}
 
 /* 
 .chair {
