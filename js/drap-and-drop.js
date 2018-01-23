@@ -1,20 +1,36 @@
-function allowDrop(ev) {
-    ev.preventDefault();
-}
+$(document).ready(function() 
+{
+    $("#select-chair").draggable({revert: true});
+    $("#select-table").draggable({revert: true});
+    $("#plan-area").droppable({
+        drop:function(event, ui)
+        {
+            $("#plan-area").append(ui.draggable.clone().removeClass().removeAttr('style'));
+            // $("#plan-area").text(ui.draggable[0].id);
+        }
+    });
+});
 
-function drop(ev) {
-    ev.preventDefault();
-    var data = ev.dataTransfer.getData("image");
-    var target = ev.target;
-    // while (" "+target.className+" ".indexOf(" working-space ") == -1) target = target.parentNode;
-    ev.target.appendChild(document.getElementById(data));
-    // target.appendChild(document.getElementById(data));
-}
 
-function drag(ev) {
-    ev.dataTransfer.setData("image", ev.target.id);
-    ev.dataTransfer.effectAllowed = 'copy';
-}
+
+
+// function allowDrop(ev) {
+//     ev.preventDefault();
+// }
+
+// function drop(ev) {
+//     ev.preventDefault();
+//     var data = ev.dataTransfer.getData("image");
+//     var target = ev.target;
+//     // while (" "+target.className+" ".indexOf(" working-space ") == -1) target = target.parentNode;
+//     ev.target.appendChild(document.getElementById(data));
+//     // target.appendChild(document.getElementById(data));
+// }
+
+// function drag(ev) {
+//     ev.dataTransfer.setData("image", ev.target.id);
+//     ev.dataTransfer.effectAllowed = 'copy';
+// }
 
 // var elem = document.getElementById('plan-area');
 // elem.addEventListener('mousemove', drag);

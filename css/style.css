@@ -21,6 +21,10 @@ body {
     width: 55px;
 }
 
+#select-table {
+    width: 130px;
+}
+
 /* 
 .chair {
     background-image: url("../assets/545151513.png")
