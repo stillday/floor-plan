@@ -2,8 +2,22 @@
 <html>
     <head>
         <meta charset="UTF-8">
+        <link rel="stylesheet" href="js-ui/jquery-ui.min.css">
         <script src="js/jquery-3.3.1.js"></script>
+        <script src="js-ui/jquery-ui.min.js"></script>
         <link rel="stylesheet" href="css/style.css">
+        <script>
+            $(document).ready(function() 
+                {
+                    $("#select-chair").draggable();
+                    $("#plan-area").droppable({
+                        drop:function(event, ui)
+                        {
+                            $("#plan-area").text(ui.draggable[0].id);
+                        }
+                    });
+                });
+        </script>
     </head>
     <body>
         <div class="wrapper">
@@ -12,10 +26,10 @@
             </div>
             <div class="content">
                 <div class="menu">
-                    <div class="chair"><img  src="assets/545151513.png"> </div>
+                    <div class="chair"><img id="select-chair" src="assets/545151513.png"> </div>
                     <div class="table"></div>
                 </div>
-                <div class="working-space" >
+                <div class="working-space" id="plan-area">
 
                 </div>
             </div>

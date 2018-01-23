@@ -10,6 +10,7 @@ body {
 }
 
 .working-space {
+    /* position: absolute; */
     border: 1px solid;
     float: right;
     width: 89%;
